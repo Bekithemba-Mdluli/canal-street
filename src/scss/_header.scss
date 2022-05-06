@@ -1,0 +1,188 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: scroll;
+
+    &__home {
+        background: beige;
+        z-index: 10;
+    }
+
+    &__community {
+        background: red;
+        z-index: 75;
+    }
+
+    &__food {
+        background: purple;
+        z-index: 50;
+    }
+
+    &__retail {
+        background: orange;
+        z-index: 25;
+    }
+
+    &__container {
+        width: 100%;
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            flex-wrap: wrap;
+
+            li:nth-child(1) {
+                background-color: $white;
+
+                span {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            li:nth-child(2) {
+                background-color: $blue;
+
+                span {
+                    transform: rotate(45deg);
+                }
+            }
+
+            li:nth-child(3) {
+                background-color: $red;
+
+                span {
+                    transform: rotate(45deg);
+                }
+            }
+
+            li:nth-child(4) {
+                background-color: $yellow;
+
+                span {
+                    transform: rotate(-45deg);
+                }
+            }
+
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 361px;
+
+                span {
+                    display: inline-block;
+                    font-size: 20px;
+                    font-family: "apercu mono", sans-serif;
+                }
+            }
+        }
+
+        &-btn {
+            // background-color: $white;
+            border: 1px solid $black;
+            padding: 20px;
+            font-size: 16px;
+            font-family: "apercu mono";
+            text-align: center;
+        }
+
+        &-p {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-family: 'apercu mono';
+
+            p {
+                margin: 0;
+                color: hsla(0, 0%, 0%, 0.684);
+            }
+        }
+
+        &-a {
+
+            a {
+                text-decoration: underline;
+                font-family: 'apercu mono';
+                font-size: 14px;
+            }
+        }
+
+        &-social {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 38px;
+
+            &-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                width: 45%;
+                border: 1px solid $black;
+
+
+                img {}
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+
+.panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 4%;
+    transition: all 0.5s ease;
+
+    p {
+        transform: rotate(90deg);
+        transform-origin: 0;
+        transition: all 1s ease;
+    }
+}
+
+.active {
+    width: 88%;
+
+    p {
+        transform: rotate(0);
+    }
+}
+
+@font-face {
+    font-family: "apercu mono";
+    src: url('../fonts/apercu_mono.ttf');
+}
+
+.nav__container {
+    padding: 30px;
+}
+
+.close {
+    position: absolute;
+    // height: 30px;
+    // width: 30px;
+    right: 20px;
+    top: 40px;
+
+    img {
+        // object-fit: contain;
+        // height: 30px;
+        // width: 30px;
+    }
+}
