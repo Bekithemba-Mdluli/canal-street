@@ -1,0 +1,39 @@
+.outer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 5%;
+    transition: all 0.5s ease;
+}
+
+.home {
+    background: $white;
+    z-index: 10;
+}
+
+.one {
+    background: $blue;
+    z-index: 75;
+}
+
+.two {
+    background: $red;
+    z-index: 50;
+}
+
+.three {
+    background: $yellow;
+    z-index: 25;
+}
+
+.active {
+    width: 85%;
+}

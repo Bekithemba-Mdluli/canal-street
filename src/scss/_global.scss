@@ -115,3 +115,46 @@ a {
 button {
   cursor: pointer;
 }
+
+.btn {
+  width: 100%;
+  border: 1px solid $black;
+  padding: 20px;
+  font-size: 16px;
+  font-family: "apercu mono";
+  text-align: center;
+  background-color: transparent;
+
+  @include breakpoint-up(large) {
+    width: 25%;
+  }
+}
+
+
+// Border animation
+.border {
+  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  justify-content: center;
+  animation: border-movement .4s infinite normal;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  position: relative;
+  cursor: pointer;
+}
+
+.border:hover {
+  animation-play-state: running
+}
+
+@keyframes border-movement {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0
+  }
+
+  to {
+    background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px
+  }
+}
