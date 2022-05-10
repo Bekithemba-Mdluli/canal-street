@@ -25,7 +25,7 @@ function about() {
             {/* <MobileNav /> */}
 
             <section className='main__section'>
-                <h1>Canal Street Market is a carefully curated retail market, food hall &amp; community space open year-round at 265 Canal Street. </h1>
+                <h1>Canal Street Market is a carefully curated retail market, food hall &amp; community space open year-round at 265 Canal Street.  Support Small Business this weekend!</h1>
             </section>
 
             <div className='main__plants'>
@@ -89,17 +89,17 @@ function about() {
 
             <div className='main__events__row'>
                 <div className='main__events__row-cards'>
-                    <div className='main__events__row-cards-card border'>
+                    <div className='main__events__row-cards-card'>
                         <span>10/22</span>
                         <p>Small Business Retail Pop Up Weekend!</p>
                     </div>
 
-                    <div className='main__events__row-cards-card border'>
+                    <div className='main__events__row-cards-card'>
                         <span>02/07</span>
                         <p>New Balance x Paperboy Paris by Greenhouse @ Canal Street Market</p>
                     </div>
 
-                    <div className='main__events__row-cards-card border'>
+                    <div className='main__events__row-cards-card'>
                         <span>12/11</span>
                         <p>Hack City 12/11</p>
                     </div>
