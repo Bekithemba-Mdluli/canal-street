@@ -85,12 +85,14 @@ h3 {
 // Visibility
 .hide-for-mobile {
   @include breakpoint-down(medium) {
+    display: unset;
     display: none !important;
   }
 }
 
 .hide-for-desktop {
   @include breakpoint-up(large) {
+    display: unset;
     display: none !important;
   }
 }
@@ -127,6 +129,13 @@ button {
 
   @include breakpoint-up(large) {
     width: 25%;
+  }
+
+  transition: .2s;
+
+  &:hover {
+    background-color: black;
+    color: $white;
   }
 }
 
