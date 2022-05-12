@@ -3,6 +3,7 @@ import HeaderStrip from "../components/shared/HeaderStrip";
 import Footer from "../components/shared/Footer";
 
 import csm from "../assets/csm.jpeg";
+import tech from "../assets/tech.jpeg";
 
 function Community() {
   return (
@@ -77,37 +78,97 @@ function Community() {
         </div>
       </div>
 
-      <div className="com__events">
-        <h2>Market Events</h2>
-        <div className="com__events__row">
-          <div className="com__events__row-item">
-            <span>10/22 (past)</span>
-            <p>Samll Business Retail Pop Up Weeken!</p>
+      <div class="single-events">
+        <div class="single-events__grid">
+          <h2>Market Events</h2>
+          <div class="single-events__row">
+            <div class="single-events__item">
+              <span>10/22 (past)</span>
+              <p>
+                <a href="/community/event/small-business-retail-pop-up-weekend">
+                  Small Business Retail Pop Up Weekend!
+                </a>
+              </p>
+            </div>
+            <div class="single-events__item empty"></div>
+            <div class="single-events__item empty"></div>
+            <div class="single-events__item">
+              <span>02/07 (past)</span>
+              <p>
+                <a href="/community/event/new-balance-has-teamed-up-with-paris-based-restaurant-meets-streetwear">
+                  New Balance x Paperboy Paris by Greenhouse @ Canal Street
+                  Market
+                </a>
+              </p>
+            </div>
           </div>
-
-          <div className="com__events__row-item">
-            <span>02/07 (past)</span>
-            <p>
-              New Balance x Paperboy Paris by Greenhouse @ Canal Street Market
-            </p>
+          <div class="single-events__row">
+            <div class="single-events__item">
+              <span>12/11 (past)</span>
+              <p>
+                <a href="/community/event/comedy-show">Hack City 12/11</a>
+              </p>
+            </div>
+            <div class="single-events__item empty"></div>
+            <div class="single-events__item empty"></div>
+            <div class="single-events__item">
+              <span>07/27 (past)</span>
+              <p>
+                <a href="/community/event/taiwanese-waves-look-backa-pop-up-exhibition-for">
+                  Taiwanese Wave
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-        <div className="com__events__row">
-          <div className="com__events__row-item">
-            <span>12/11 (past)</span>
-            <p>Hack City 12/11</p>
+
+        <a class="single-events__more" href="/community">
+          view all
+        </a>
+      </div>
+
+      <div className="com__features">
+        <h2>Features</h2>
+
+        <div className="com__features__grid">
+          <div className="com__features__grid__item">
+            <div className="com__features__grid__item-pic i1 i">
+              {/* <img src={tech} alt="Bereop Tech" /> */}
+            </div>
+            <div className="com__features__grid__item-text">
+              <span>CSM Cmmunity AMDC</span>
+            </div>
           </div>
 
-          <div className="com__events__row-item">
-            <span>07/27 (past)</span>
-            <p>Taiwanese Wave</p>
+          <div className="com__features__grid__item">
+            <div className="com__features__grid__item-pic i2 i">
+              {/* <img src={tech} alt="Bereop Tech" /> */}
+            </div>
+            <div className="com__features__grid__item-text">
+              <span>CSM Community - Joe's Steam Rice Rolls</span>
+            </div>
           </div>
-        </div>
 
-        <div className="com__events">
-          <button className="btn">view all</button>
+          <div className="com__features__grid__item">
+            <div className="com__features__grid__item-pic i3 i">
+              {/* <img src={tech} alt="Bereop Tech" /> */}
+            </div>
+            <div className="com__features__grid__item-text">
+              <span>CSM Community - Bereop Tech</span>
+            </div>
+          </div>
+
+          <div className="com__features__grid__item">
+            <div className="com__features__grid__item-pic i4 i">
+              {/* <img src={tech} alt="Bereop Tech" /> */}
+            </div>
+            <div className="com__features__grid__item-text">
+              <span>CSM Community - Bereop Tech</span>
+            </div>
+          </div>
         </div>
       </div>
+
       <Footer />
     </main>
   );
