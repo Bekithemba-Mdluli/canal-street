@@ -9,3 +9,6 @@ https://css-tricks.com/adding-stroke-to-web-text/
 
 # Border animation
 https://stackoverflow.com/questions/28365839/dashed-border-animation-in-css3-animation
+
+# Background Repeat 
+https://www.w3schools.com/cssref/pr_background-repeat.asp

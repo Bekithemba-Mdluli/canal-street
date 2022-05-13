@@ -3,7 +3,7 @@ import HeaderStrip from "../components/shared/HeaderStrip";
 import Footer from "../components/shared/Footer";
 
 import csm from "../assets/csm.jpeg";
-import tech from "../assets/tech.jpeg";
+import radio from "../assets/icon-radio.svg";
 
 function Community() {
   return (
@@ -41,7 +41,7 @@ function Community() {
           <div className="com__hero__img">
             <span>文化</span>
             <div className="com__hero__img-pic">
-              <img src={csm} alt="Outside canal street" />
+              <img className="hide" src={csm} alt="Outside canal street" />
             </div>
           </div>
         </div>
@@ -167,6 +167,50 @@ function Community() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="com__radio">
+        <div className='food__discount'>
+
+          <div className='food__discount-img'>
+            <img src={radio} alt="Smily face" />
+          </div>
+          <div className='food__discount-content'>
+            <h2>Market Radio</h2>
+
+            <p>
+              Podcasted from the market
+            </p>
+          </div>
+          <div className='food__discount-img thirdd'>
+            <img className="third" src={radio} alt="Smily face" />
+          </div>
+        </div>
+
+        <div className="com__radio__cards">
+          <div className="com__radio__cards-card">
+            <span>05/08</span>
+            <p>
+              S2E2: The Secret Art of Self-Defense w/ Emma Choi (NPR's "Everyone &amp; Their Mom")
+            </p>
+          </div>
+
+          <div className="com__radio__cards-card">
+            <span>05/08</span>
+            <p>
+              Haley Carter Speaks on Her Incredible Fight for the Afghanistan Women's National Team + NWSL Challenge Cup,/Regular Season News and Women's Champions League Final Preview
+            </p>
+          </div>
+
+          <div className="com__radio__cards-card">
+            <span>05/08</span>
+            <p>
+              We're back and we're better!
+            </p>
+          </div>
+          <button className="btn">see all</button>
+        </div>
+
       </div>
 
       <Footer />

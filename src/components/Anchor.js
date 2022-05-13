@@ -1,18 +1,19 @@
 import React from 'react'
 import logo from '../assets/logo.svg';
 
-function Anchor({ symbol, name, isHome }) {
+function Anchor({ symbol, name, isHome, direction }) {
     return (
-        <a href='/' className="link">
+        <a href={direction} className="link" >
             {/* <div > */}
-            <span className={isHome === true ? 'hide' : ''}>{symbol}</span>
+            < span className={isHome === true ? 'hide' : ''
+            }> {symbol}</ span>
             <p className={isHome === true ? 'hide' : ''}>{name}</p>
             {/* </div> */}
 
             <div className={!isHome ? 'hide' : ''}>
                 <img src={logo} alt='Logo' />
             </div>
-        </a>
+        </a >
     )
 }
 

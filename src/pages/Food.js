@@ -8,15 +8,6 @@ import smile from '../assets/icon-smile.svg'
 function Food() {
     return (
         <main className='food'>
-            {/* <header className='main__header'>
-                <div className='main__header-logo'>
-                    <img src={logo} alt='Logo' />
-                </div>
-
-                <div className='main__header-menu hide-for-desktop'>
-                    <img src={menu} alt='Logo' />
-                </div>
-            </header> */}
             <div className='hide-for-desktop'>
                 <HeaderStrip />
             </div>

@@ -1,4 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
+
 import Anchor from "./components/Anchor";
 import About from "./pages/About";
 import Food from "./pages/Food";
@@ -6,55 +14,85 @@ import Retail from "./pages/Retail";
 import Community from "./pages/Community";
 
 function App() {
-  const [isActive] = useState(4);
   return (
     <div>
       {/* <MobileNav /> */}
       <div className="hide-for-desktop">
-        {/* <About /> */}
+
         {/* <Food /> */}
         {/* <Retail /> */}
-        <Community />
+        {/* <Community /> */}
+        <div className={window.location.pathname === '/' ? '' : 'hide'}>
+          <About />
+        </div>
+
+        <div className={window.location.pathname === '/food' ? '' : 'hide'}>
+          <Food />
+        </div>
+
+        <div className={window.location.pathname === '/retail' ? '' : 'hide'}>
+          <Retail />
+        </div>
+
+        <div className={window.location.pathname === '/community' ? '' : 'hide'}>
+          <Community />
+        </div>
+
       </div>
+
       <div className="outer hide-for-mobile">
-        <div className="home panel">
-          <div className={isActive === 1 ? "hide" : ""}>
-            <Anchor isHome={true} />
+        <div className={window.location.pathname === '/' ? 'home panel active' : 'home panel'}>
+          <div className={window.location.pathname === '/' ? 'hide' : ''}>
+            <Anchor isHome={true} direction={'/'} />
           </div>
 
-          <div className={isActive === 1 ? "" : "hide"}>
+          <div className={window.location.pathname === '/' ? '' : 'hide'}>
             <About />
           </div>
         </div>
+        {console.log(window.location.pathname === '/food' ? 'active' : '')}
 
-        <div className="one panel">
-          <div className={isActive === 2 ? "hide" : ""}>
-            <Anchor symbol={"餐饮"} name={"Food"} isHome={false} />
+        <div className={window.location.pathname === '/food' ? 'one panel active' : 'one panel'}>
+          <div className={window.location.pathname === '/food' ? 'hide' : ''}>
+            <Anchor symbol={"餐饮"} name={"Food"} isHome={false} direction={'/food'} />
           </div>
 
-          <div className={isActive === 2 ? "" : "hide"}>
+          <div className={window.location.pathname === '/food' ? '' : 'hide'}>
             <Food />
           </div>
         </div>
 
-        <div className="two panel">
-          <div className={isActive === 3 ? "hide" : ""}>
-            <Anchor symbol={"購物"} name={"Retail"} isHome={false} />
+        <div className={window.location.pathname === '/retail' ? 'two panel active' : 'two panel'}>
+          <div className={window.location.pathname === '/retail' ? 'hide' : ''}>
+            <Anchor symbol={"購物"} name={"Retail"} isHome={false} direction={'/retail'} />
           </div>
-          <div className={isActive === 2 ? "" : "hide"}>
+          <div className={window.location.pathname === '/retail' ? '' : 'hide'}>
             <Retail />
           </div>
         </div>
 
-        <div className="three panel active">
-          <div className={isActive === 4 ? "hide" : ""}>
-            <Anchor symbol={"文化"} name={"Community"} isHome={false} />
+        <div className={window.location.pathname === '/community' ? 'three panel active' : 'three panel'}>
+          <div className={window.location.pathname === '/community' ? 'hide' : ''}>
+            <Anchor symbol={"文化"} name={"Community"} isHome={false} direction={'/community'} />
           </div>
-          <div className={isActive === 4 ? "" : "hide"}>
+          <div className={window.location.pathname === '/community' ? '' : 'hide'}>
             <Community />
           </div>
         </div>
       </div>
+
+
+      {/* <Routes> */}
+      {/* <Route path="/food">
+          <Food />
+        </Route> */}
+      {/* <Route path="/users">
+          <Users />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route> */}
+      {/* </Routes> */}
     </div>
   );
 }

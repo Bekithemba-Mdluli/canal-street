@@ -4,15 +4,16 @@ import facebook from '../../assets/icon-facebook.svg';
 import instagram from '../../assets/icon-instagram.svg';
 import close from '../../assets/icon-close.png';
 
-const MobileNav = ({ open }) => {
+const MobileNav = ({ active, func }) => {
+
     return (
-        <header className='hide-for-desktop hide'>
-            <div className={open ? 'header__container' : 'header__container'}>
-                <div className='close'>
+        <header className={active ? 'hide-for-desktop' : 'hide-for-desktop hide'}>
+            <div className='header__container'>
+                <div className='close' onClick={func}>
                     <img src={close} alt='Close icon' />
                 </div>
                 <ul>
-                    <li><a href='/about'><span>About</span></a></li>
+                    <li><a href='/'><span>About</span></a></li>
                     <li><a href='/food'><span>Food</span></a></li>
                     <li><a href='/retail'><span>Retail</span></a></li>
                     <li><a href='/community'><span>Community</span></a></li>
